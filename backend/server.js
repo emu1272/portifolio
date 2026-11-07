@@ -26,17 +26,17 @@ const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   "http://localhost:5173",
   "https://portifolio-2smunu2of-emu1272.vercel.app",
+  "https://portifolio-2smunu2of-emu1272.vercel.app/",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (mobile, curl) or allowed origins
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.some(o => origin.startsWith(o.replace(/\/$/, '')))) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(new Error("Not allowed by CORS: " + origin));
       }
     },
     credentials: true,
