@@ -22,23 +22,10 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 // ==========================================
 
-// CORS — allow Vercel frontend + localhost
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://portifolio-2smunu2of-emu1272.vercel.app",
-  "https://portifolio-2smunu2of-emu1272.vercel.app/",
-  process.env.FRONTEND_URL,
-].filter(Boolean);
-
+// CORS — allow all origins (production fix)
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.some(o => origin.startsWith(o.replace(/\/$/, '')))) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS: " + origin));
-      }
-    },
+    origin: true,
     credentials: true,
   })
 );
