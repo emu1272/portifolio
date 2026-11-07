@@ -5,8 +5,9 @@ import CertificatePage from "./CertificatePage";
 import "./App.css";
 import AdminDashboard from "./AdminDashboard";
 
-const API_URL     = "http://localhost:5000/api/projects";
-const CONTACT_URL = "http://localhost:5000/api/contact";
+const BASE_URL    = "https://emebetportifolio.onrender.com";
+const API_URL     = `${BASE_URL}/api/projects`;
+const CONTACT_URL = `${BASE_URL}/api/contact`;
 
 const skills = [
   // Web
@@ -121,7 +122,7 @@ export default function App() {
 
   // Check admin session on load
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/me", { credentials: "include" })
+    fetch("https://emebetportifolio.onrender.com/api/auth/me", { credentials: "include" })
       .then(r => r.ok ? r.json() : null)
       .then(data => { if (data?.user?.role === "admin") setIsAdmin(true); })
       .catch(() => {});
@@ -266,7 +267,7 @@ export default function App() {
               <button
                 className="nav-logout-btn"
                 onClick={async () => {
-                  await fetch("http://localhost:5000/api/auth/logout", {
+                  await fetch("https://emebetportifolio.onrender.com/api/auth/logout", {
                     method: "POST",
                     credentials: "include",
                   });

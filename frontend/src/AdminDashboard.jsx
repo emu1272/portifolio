@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import "./AdminDashboard.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://emebetportifolio.onrender.com/api";
 
 // ─── Blank project form ───────────────────────────────────────────────────────
 const BLANK_PROJECT = {
