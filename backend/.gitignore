@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# Secrets and environment variables (DO NOT COMMIT)
+.env
+.env.local

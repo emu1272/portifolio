@@ -1,0 +1,29 @@
+{
+  "name": "emebet-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Emebet Morde's Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "express",
+    "react",
+    "mysql",
+    "aiven"
+  ],
+  "author": "Emebet Morde",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^8.7.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.11.0"
+  }
+}

@@ -1,0 +1,6 @@
+/* Base layout reset to allow App.css to style full-width sections properly */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

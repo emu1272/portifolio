@@ -1,0 +1,419 @@
+/* ═══════════════════════════════════════════
+   Admin Dashboard — Modern Dark Style
+═══════════════════════════════════════════ */
+
+.admin-dashboard {
+  display: flex;
+  min-height: 85vh;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+/* ── Sidebar ─────────────────────────────── */
+.admin-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 28px 16px;
+  background: linear-gradient(180deg, #0f1e35 0%, #0b1120 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1e3a5f;
+}
+
+.admin-sidebar h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-sidebar-subtitle {
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.admin-sidebar nav button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  color: #94a3b8;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.admin-sidebar nav button:hover {
+  background: #1e3a5f;
+  color: #e2e8f0;
+}
+
+.admin-sidebar nav button.active {
+  background: linear-gradient(90deg, #1e40af, #0284c7);
+  color: white;
+  box-shadow: 0 4px 15px rgba(2,132,199,0.3);
+}
+
+.admin-sidebar nav button .menu-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.admin-logout {
+  margin-top: 20px !important;
+  background: transparent !important;
+  border: 1px solid #c0392b !important;
+  color: #f87171 !important;
+  border-radius: 10px !important;
+  justify-content: center !important;
+  transition: all 0.2s !important;
+}
+
+.admin-logout:hover {
+  background: #c0392b !important;
+  color: white !important;
+}
+
+/* ── Main content ────────────────────────── */
+.admin-content {
+  flex: 1;
+  padding: 32px;
+  min-width: 0;
+  background: var(--bg);
+  overflow-y: auto;
+}
+
+.admin-content h1 {
+  margin: 0 0 24px;
+  font-size: 26px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-content section {
+  padding: 28px;
+  background: var(--bg2);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.admin-content section h2 {
+  color: var(--text);
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.admin-content section p {
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+/* ── Stats cards ─────────────────────────── */
+.admin-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.admin-stat-card {
+  flex: 1;
+  min-width: 140px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-stat-card:nth-child(2) {
+  border-top-color: #a78bfa;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(56,189,248,0.15);
+}
+
+.admin-stat-card h3 {
+  margin: 0 0 10px;
+  color: var(--text3);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.admin-stat-card p {
+  margin: 0 !important;
+  color: var(--accent) !important;
+  font-size: 36px !important;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.admin-stat-card:nth-child(2) p {
+  color: #a78bfa !important;
+}
+
+/* ── Buttons ─────────────────────────────── */
+.admin-content section button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.admin-content section button:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #475569 !important;
+}
+
+.btn-secondary:hover {
+  background: #334155 !important;
+}
+
+.btn-danger {
+  background: #dc2626 !important;
+}
+
+.btn-danger:hover {
+  background: #b91c1c !important;
+}
+
+/* ── Project form ────────────────────────── */
+.admin-project-form {
+  margin-top: 20px;
+  padding: 24px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(56,189,248,0.1);
+}
+
+.admin-project-form h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.admin-project-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-project-form input,
+.admin-project-form textarea {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--bg2);
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.admin-project-form input:focus,
+.admin-project-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.1);
+}
+
+.admin-checkbox-label {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--text2) !important;
+  cursor: pointer;
+}
+
+/* ── Project list ────────────────────────── */
+.admin-project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-project-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  gap: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.admin-project-list li:hover {
+  border-color: var(--accent);
+  transform: translateX(3px);
+}
+
+.badge-featured {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: rgba(56,189,248,0.1);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+}
+
+/* ── Message list ────────────────────────── */
+.admin-message-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-message-list li {
+  padding: 18px 22px;
+  background: var(--bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  transition: transform 0.2s;
+}
+
+.admin-message-list li:hover {
+  transform: translateX(3px);
+}
+
+.msg-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.msg-header strong {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.msg-header a {
+  color: var(--accent);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.msg-header a:hover {
+  text-decoration: underline;
+}
+
+.msg-date {
+  font-size: 12px;
+  color: var(--text3);
+  margin-left: auto;
+}
+
+.msg-body {
+  margin: 0;
+  color: var(--text2);
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ── Settings code block ─────────────────── */
+.admin-content code {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 650px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: auto;
+    padding: 16px;
+  }
+
+  .admin-sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .admin-sidebar nav button {
+    width: auto;
+    padding: 10px 14px;
+  }
+
+  .admin-content {
+    padding: 16px;
+  }
+
+  .admin-content h1 {
+    font-size: 22px;
+  }
+
+  .admin-stats {
+    flex-direction: column;
+  }
+}
